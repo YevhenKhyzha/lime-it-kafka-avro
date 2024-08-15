@@ -10,13 +10,13 @@ protocol ClientModelAvro {
 	}
 
 	record MobilePhoneNumberAvro {
-    	int id;
-    	boolean primary;
-    	string number;
-    	string? name = "";
-    	string? description = "";
-    	timestamp_ms created;
-    }
+		int id;
+		boolean primary;
+		string number;
+		string? name = "";
+		string? description = "";
+		timestamp_ms created;
+	}
 
 	record AddressAvro {
 		int addressId;
@@ -38,5 +38,5 @@ protocol ClientModelAvro {
 		array<BankAccountAvro> bankAccounts;
 		array<MobilePhoneNumberAvro> mobileNumbers;
 		array<AddressAvro> addresses;
-    }
+	}
 }

@@ -78,7 +78,7 @@
                             <goal>idl-protocol</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/avro-api/</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/avro-api/avdl/</sourceDirectory>
                             <fieldVisibility>PRIVATE</fieldVisibility>
                         </configuration>
                     </execution>

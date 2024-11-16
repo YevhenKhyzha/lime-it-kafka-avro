@@ -1,0 +1,15 @@
+{
+  "type" : "record",
+  "name" : "ClientKeyAvro",
+  "namespace" : "com.lime.it.kafka.avro.client",
+  "fields" : [ {
+    "name" : "clientId",
+    "type" : "int"
+  }, {
+    "name" : "firstName",
+    "type" : "string"
+  }, {
+    "name" : "lastName",
+    "type" : "string"
+  } ]
+}

@@ -1,0 +1,121 @@
+{
+  "type" : "record",
+  "name" : "ClientAvro",
+  "namespace" : "com.lime.it.kafka.avro.client",
+  "fields" : [ {
+    "name" : "clientId",
+    "type" : "int"
+  }, {
+    "name" : "firstName",
+    "type" : "string"
+  }, {
+    "name" : "lastName",
+    "type" : "string"
+  }, {
+    "name" : "middleName",
+    "type" : "string"
+  }, {
+    "name" : "age",
+    "type" : "int"
+  }, {
+    "name" : "dateOfBirth",
+    "type" : {
+      "type" : "int",
+      "logicalType" : "date"
+    }
+  }, {
+    "name" : "bankAccounts",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "BankAccountAvro",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "int"
+        }, {
+          "name" : "bankName",
+          "type" : "string"
+        }, {
+          "name" : "bic",
+          "type" : "string"
+        }, {
+          "name" : "iban",
+          "type" : "int"
+        }, {
+          "name" : "bankDescription",
+          "type" : [ "null", "string" ],
+          "default" : null
+        } ]
+      }
+    } ],
+    "default" : null
+  }, {
+    "name" : "mobileNumbers",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "MobilePhoneNumberAvro",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "int"
+        }, {
+          "name" : "primary",
+          "type" : "boolean"
+        }, {
+          "name" : "number",
+          "type" : "string"
+        }, {
+          "name" : "name",
+          "type" : [ "string", "null" ],
+          "default" : ""
+        }, {
+          "name" : "description",
+          "type" : [ "string", "null" ],
+          "default" : ""
+        }, {
+          "name" : "created",
+          "type" : {
+            "type" : "long",
+            "logicalType" : "timestamp-millis"
+          }
+        } ]
+      }
+    } ],
+    "default" : null
+  }, {
+    "name" : "addresses",
+    "type" : [ "null", {
+      "type" : "array",
+      "items" : {
+        "type" : "record",
+        "name" : "AddressAvro",
+        "fields" : [ {
+          "name" : "addressId",
+          "type" : "int"
+        }, {
+          "name" : "addressLine1",
+          "type" : "string"
+        }, {
+          "name" : "addressLine2",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "city",
+          "type" : "string"
+        }, {
+          "name" : "province",
+          "type" : [ "null", "string" ],
+          "default" : null
+        }, {
+          "name" : "country",
+          "type" : "string"
+        }, {
+          "name" : "zipCode",
+          "type" : "string"
+        } ]
+      }
+    } ]
+  } ]
+}

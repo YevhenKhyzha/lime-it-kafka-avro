@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "AddressAvro",
+  "namespace" : "com.lime.it.kafka.avro.client",
+  "fields" : [ {
+    "name" : "addressId",
+    "type" : "int"
+  }, {
+    "name" : "addressLine1",
+    "type" : "string"
+  }, {
+    "name" : "addressLine2",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "city",
+    "type" : "string"
+  }, {
+    "name" : "province",
+    "type" : [ "null", "string" ],
+    "default" : null
+  }, {
+    "name" : "country",
+    "type" : "string"
+  }, {
+    "name" : "zipCode",
+    "type" : "string"
+  } ]
+}

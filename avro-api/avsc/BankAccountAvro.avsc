@@ -1,0 +1,22 @@
+{
+  "type" : "record",
+  "name" : "BankAccountAvro",
+  "namespace" : "com.lime.it.kafka.avro.client",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "int"
+  }, {
+    "name" : "bankName",
+    "type" : "string"
+  }, {
+    "name" : "bic",
+    "type" : "string"
+  }, {
+    "name" : "iban",
+    "type" : "int"
+  }, {
+    "name" : "bankDescription",
+    "type" : [ "null", "string" ],
+    "default" : null
+  } ]
+}

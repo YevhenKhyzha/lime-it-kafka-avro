@@ -1,0 +1,29 @@
+{
+  "type" : "record",
+  "name" : "MobilePhoneNumberAvro",
+  "namespace" : "com.lime.it.kafka.avro.client",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "int"
+  }, {
+    "name" : "primary",
+    "type" : "boolean"
+  }, {
+    "name" : "number",
+    "type" : "string"
+  }, {
+    "name" : "name",
+    "type" : [ "string", "null" ],
+    "default" : ""
+  }, {
+    "name" : "description",
+    "type" : [ "string", "null" ],
+    "default" : ""
+  }, {
+    "name" : "created",
+    "type" : {
+      "type" : "long",
+      "logicalType" : "timestamp-millis"
+    }
+  } ]
+}

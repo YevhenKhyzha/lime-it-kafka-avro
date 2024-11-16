@@ -1,5 +1,5 @@
 @namespace("com.lime.it.kafka.avro.client")
-protocol ClientModelAvro {
+protocol ClientModelProtocol {
 
 	record BankAccountAvro {
 		int id;
@@ -35,8 +35,14 @@ protocol ClientModelAvro {
 		string middleName;
 		int age;
 		date dateOfBirth;
-		array<BankAccountAvro> bankAccounts;
-		array<MobilePhoneNumberAvro> mobileNumbers;
-		array<AddressAvro> addresses;
+		union { null, array<BankAccountAvro> } bankAccounts = null;
+		union { null, array<MobilePhoneNumberAvro> } mobileNumbers = null;
+		union { null, array<AddressAvro> } addresses;
+	}
+
+	record ClientKeyAvro {
+		int clientId;
+		string firstName;
+		string lastName;
 	}
 }
